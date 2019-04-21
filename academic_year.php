@@ -35,7 +35,7 @@
           
          <div class="form-group">
          <label>Academic Year:</label>
-         <input class="form-control" id="a_yr" name="a_yr" placeholder="Enter year eg.(2018-2019)"/>
+         <input class="form-control" id="a_yr" name="a_yr" placeholder="Enter year eg.(2018-19)"/>
          </div>
          
          <center>

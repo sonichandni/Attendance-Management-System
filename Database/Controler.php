@@ -214,7 +214,6 @@ if (isset($_REQUEST["sub_submit"])) {
             "sem_no" => $_REQUEST["sem"], "ufac_id" => 0);
         //print_r($data);exit;
         $md->insert($con, $data, "subject1");
-        
         $sub_data = $md->dis_join_con1($con, "subject", "faculty", "subject.ufac_id=faculty.ufac_id", $where);
         $_SESSION["subdata"] = $sub_data;
         header("location:view_sub.php");
@@ -645,14 +644,12 @@ if(isset($_REQUEST["db"]))
 //View Subject
 if (isset($_REQUEST["vs"])) 
 {
-    unset($_SESSION["subdata"]);
     $where = array(1 => '1');
     $subc_data = $md->dis_join_con1($con, "subject", "faculty", "subject.ufac_id=faculty.ufac_id", $where);
     $sube_data = $md->dis_join_con1($con, "subject1", "faculty", "subject1.ufac_id=faculty.ufac_id", $where);
     $sub_data = array_merge($subc_data, $sube_data);
     $_SESSION["subdata"] = $sub_data;
-    // echo "<pre>";
-    // print_r($subc_data);exit();
+
     header("location:view_sub.php");
 }
 //Assign Subjects
@@ -844,7 +841,7 @@ if (isset($_REQUEST["Academic_yr"])) {
             $a = $y->ac_year;
             $aid = $y->ac_year_id;
         }
-        $ar = explode("-", $a);
+        $ar = split("-", $a);
         $mn = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
         $dt = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31);
         $yr = $ar[0];
@@ -2511,18 +2508,16 @@ if (isset($_REQUEST["ov_rn"])) {
         );
         $i = 0;
         $check[] = array();
-        if(isset($overall_res)){
         foreach ($overall_res as $or) {
             $check[$i] = $or->date;
             $i++;
-        }}
+        }
         $i = 0;
         $check1[] = array();
-        if(isset($overall_res)){
         foreach ($overall_res as $sl) {
             $check1[$i] = $sl->sub_id;
             $i++;
-        }}
+        }
 
         $days = $md->sel_where($con, "days", $where);
         $where = array(
@@ -2530,12 +2525,11 @@ if (isset($_REQUEST["ov_rn"])) {
             "date<" => $d2,
             "present" => 1
         );
-        if(isset($overall_res)){
         for ($i = 0; $i < 1; $i++) {
             foreach ($overall_res as $o) {
                 $where["s_enrl"] = $o->s_enrl;
             }
-        }}
+        }
         $tp = $md->sel_count_wh($con, $table, $where);
         $where["present"] = 0;
         $ta = $md->sel_count_wh($con, $table, $where);
