@@ -1040,11 +1040,11 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`ufac_id`, `fac_id`, `fac_name`, `c_id`, `email`, `contact`, `password`, `role`) VALUES
-(1, 'CR', 'Chintal raval', 0, 'chintalravalCR@gmail.com', 0, 'chintalravalCR', 2),
+(1, 'CR', 'Chintal raval', 0, 'chandni@gmail.com', 0, 'chandni', 2),
 (2, 'HP', 'Hitesh Parmar', 0, 'hiteshparmarHP@gmail.com', 0, 'hiteshparmarHP', 2),
 (3, 'PG', 'Pooja Gandhi', 0, 'poojagandhiPG@gmail.com', 0, 'poojagandhiPG', 2),
 (4, 'PJ', 'Pooja Jain', 0, 'poojajainPJ@gmail.com', 0, 'poojajainPJ', 2),
-(6, 'JP', 'Dr. Jayraj Pandya', 2, 'jayrajpandyaJP@gmail.com', 0, 'jayrajpandyaJP', 1),
+(6, 'JP', 'Dr. Jayraj Pandya', 2, 'chandnisoni@gmail.com', 0, 'chandnisoni', 1),
 (7, 'MD', 'Dr. Maulik Desai', 1, 'maulikdesaiMD@gmail.com', 0, 'maulikdesaiMD', 2),
 (8, 'IB', 'Dr. Ismail Bootwala', 1, 'ismailbootwalaIb@gmail.com', 0, 'ismailbootwalaIb', 2),
 (9, 'MU', 'Milan Undavia', 1, 'milanundaviaMU@gmail.com', 0, 'milanundaviaMU', 2),
