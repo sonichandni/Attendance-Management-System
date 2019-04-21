@@ -11,16 +11,9 @@
           <div class="table-responsive">
           
          <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                   <td><center><br><img src="img/u.jpg" height="20%" width="30%" style="border-radius:50%;"></center><br>
-                        <b><h3><center>URMI SONI</center></h3></b>
-                        <h4><center><b>Email:</b>urmisoni456@gmail.com</center>
-                        <h4><center><b>Contact Number:</b>8155800682</center>
-                   </td>
-                   <td> <center><br><img src="img/c.jpg" height="20%" width="28%" style="border-radius:50%;"></center>  
-                         <br>
-						 <b><h3><center>CHANDNI SONI</center></h3></b>
-                                <h4><center><b>Email:</b>soni.chandni.415@gmail.com</center>
-                                <h4><center><b>Contact Number:</b>7405383742</center>
+                   <td> 
+						<b><h3><center>CHANDNI SONI</center></h3></b>
+                        <h4><center><b>Email:</b> soni.chandni.415@gmail.com</center>
                    </td>
           </table>
 <?php

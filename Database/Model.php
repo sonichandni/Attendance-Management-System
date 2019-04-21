@@ -97,7 +97,7 @@
             {
                 $q.=" and $k='$v'";
             }
-             // echo $q; exit;
+            // echo $q; exit;
             $al=$con->query($q);
             while($row=$al->fetch_object())
             {
@@ -279,7 +279,7 @@
         }
         function sel($con,$table,$colm)
         {
-            $q="select distinct $colm from $table";
+           $q="select distinct $colm from $table";
             
             //echo $q;exit;
             $all1=$con->query($q);

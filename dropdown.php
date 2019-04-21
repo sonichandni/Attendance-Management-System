@@ -606,6 +606,7 @@ if(isset($_REQUEST["ov_rn"]))
                                             <tr style="font-size: large;color: blue;">
                                                 <td colspan="5"><center><b>
                                                     <?php
+                                                    if($gt!=0){
                                                     if(($gp/$gt*100)>=75)
                                                     {
                                                         echo "Good Result..<i class='fa fa-smile-o'></i>";
@@ -616,6 +617,11 @@ if(isset($_REQUEST["ov_rn"]))
                                                         echo 75-round(($gp/$gt*100),2);
                                                         echo " % attendance &#9785;";
                                                     }
+                                                    }
+                                                    else
+                                                {
+                                                    echo "0%";
+                                                }
                                                     ?>
                                                 </b> </center>
                                                 </td>
@@ -981,6 +987,9 @@ if(isset($_REQUEST["crs_spec"]))
 if(isset($_REQUEST["part"]))
 {
     $_SESSION["partd"]=$_REQUEST["part"];
+    ?>
+    
+    <?php
         if($_REQUEST["part"]==2){
  ?>
           
